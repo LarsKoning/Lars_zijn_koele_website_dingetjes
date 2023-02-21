@@ -1,0 +1,43 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "welcome to the new blog",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "tags": [
+        "webdev",
+        "coding",
+        "news"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "top 5 CSS tips",
+      "body": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      "tags": [
+        "css",
+        "webdev",
+        "coding"
+      ]
+    },
+    {
+      "title": "sdfasd",
+      "body": "gfhvbdfsbsdf",
+      "tags": [
+        "html",
+        "css"
+      ],
+      "id": 3
+    },
+    {
+      "title": "L bozo",
+      "body": "dfanasdflfgho4talj",
+      "tags": [
+        "new",
+        "big",
+        "black"
+      ],
+      "id": 4
+    }
+  ]
+}

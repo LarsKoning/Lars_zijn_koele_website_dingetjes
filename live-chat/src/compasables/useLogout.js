@@ -5,6 +5,7 @@ const error = ref(null)
 
 const logout = async() => {
   error.value = null
+  
   try {
     await projectAuth.signOut()
   } catch(err) {

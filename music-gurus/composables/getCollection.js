@@ -1,5 +1,5 @@
 import { ref, watchEffect } from 'vue'
-import { projectFirestore } from '../firebase/config'
+import { projectFirestore } from '../src/firebase/config'
 
 const getCollection = (collection) => {
   const documents = ref(null)

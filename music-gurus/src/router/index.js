@@ -3,12 +3,25 @@ import Home from '../views/Home.vue'
 import Login from '../views/auth/Login.vue'
 import Signup from '../views/auth/Signup.vue'
 import CreatePlaylist from '../views/playlists/CreatePlaylist.vue'
+import PlaylistDetails from '@/views/playlists/PlaylistDetails.vue'
+
+import { projectAuth } from '@/firebase/config'
+
+const requireAuth = (to, from, next) => {
+  let user = projectAuth.currentUser
+  if (!user) {
+    next({ name: 'login' })
+  } else {
+    next()
+  }
+}
 
 const routes = [
   {
     path: '/',
     name: 'home',
-    component: Home
+    component: Home,
+    beforeEnter: requireAuth
   },
   {
     path: '/login',
@@ -23,7 +36,15 @@ const routes = [
   {
     path: '/playlists/create',
     name: 'createPlaylist',
-    component: CreatePlaylist
+    component: CreatePlaylist,
+    beforeEnter: requireAuth
+  },
+  {
+    path: '/playlists/:id',
+    name: 'playlistDetails',
+    component: PlaylistDetails,
+    beforeEnter: requireAuth,
+    props: true
   }
 ]
 

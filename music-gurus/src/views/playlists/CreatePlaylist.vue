@@ -9,7 +9,8 @@
     <div class="error">{{ fileError }}</div>
 
     <div class="error"></div>
-    <button>Create</button>
+    <button v-if="!isPending">Create</button>
+    <button v-else disabled>Saving...</button>
   </form>
 </template>
 
@@ -22,16 +23,34 @@ import { timestamp } from '@/firebase/config';
 
 export default {
   setup() {
+    const { error, addDoc } = useCollection('playlists')
     const { filePath, url, uploadImage } = useStorage()
+    const { user } = getUser()
+
     const title = ref('')
     const description = ref('')
     const file = ref(null)
     const fileError = ref(null)
+    const isPending = ref(false)
 
     const handleSubmit = async () => {
       if (file.value) {
+        isPending.value = true
         await uploadImage(file.value)
-        console.log('image uploaded, url: ', url.value)
+        await addDoc({
+          title: title.value,
+          description: description.value,
+          userID: user.value.uid,
+          username: user.value.displayName,
+          coverUrl: url.value,
+          filePath: filePath.value,
+          songs: [],
+          createdAt: timestamp()
+        })
+        isPending.value = false
+        if (!error.value) {
+          console.log('playlist added')
+        }
       }
     }
 
@@ -49,7 +68,7 @@ export default {
       console.log (selected)
     }
 
-    return { title, description, handleSubmit, handleChange, fileError }
+    return { title, description, handleSubmit, handleChange, fileError, isPending }
   }
 
 }

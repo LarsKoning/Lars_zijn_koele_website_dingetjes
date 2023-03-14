@@ -7,13 +7,13 @@
         <div v-if="user">
           <router-link :to="{ name: 'createPlaylist'}">Create Playlist</router-link>
           <router-link :to="{ name: 'userPlaylists'}">My Playlists</router-link>
+          <span>Hi there, {{ user.displayName }}</span>
           <button @click="handleClick">Logout</button>
         </div>
         <div v-else>
           <router-link class="btn" :to="{ name: 'signup' }">Signup</router-link>
           <router-link class="btn" :to="{ name: 'login' }">Login</router-link>
         </div>
-        
       </div>
     </nav>
   </div>
@@ -71,5 +71,13 @@ export default {
   nav img {
     max-height: 70px;
     border-radius: 50%;
+  }
+
+  span {
+    font-size: 14px;
+    display: inline-block;
+    margin-left: 16px;
+    padding-left: 16px;
+    border-left: 1px solid #eee;
   }
 </style>

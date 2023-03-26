@@ -1,11 +1,13 @@
 <template>
   <div class="navbar">
     <nav>
-      <img src="@/assets/popplio.png" alt="popplio cute">
-      <h1><router-link :to="{ name: 'home' }">Music Gurus</router-link></h1>
+      <router-link :to="{ name: 'home' }">
+      <img src="@/assets/banner.png" alt="popplio cute">
+      </router-link>
+      <!-- <h1><router-link :to="{ name: 'home' }">Lars Koning's portfolio site</router-link></h1> -->
       <div class="links">
         <div v-if="user">
-          <router-link :to="{ name: 'createPlaylist'}">Create Playlist</router-link>
+          <router-link :to="{ name: 'createPlaylist'}">Create New Blog Post</router-link>
           <!-- <router-link :to="{ name: 'userPlaylists'}">My Playlists</router-link> -->
           <span>Hi there, {{ user.displayName }}</span>
           <button @click="handleClick">Logout</button>
@@ -45,14 +47,19 @@ export default {
   .navbar {
     padding: 16px 10px;
     margin-bottom: 60px;
-    background: white;
+    background-image: linear-gradient(to right, #161616, #3c3c3c);
   }
 
   nav {
     display: flex;
-    align-items: center;
+    align-items: left;
     max-width: 1200px;
     margin: 0 auto;
+  }
+
+  img {
+    width: auto;
+    height: 100px;
   }
 
   nav h1 {
@@ -61,23 +68,26 @@ export default {
 
   nav .links {
     margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
   }
 
   nav .links a, button {
     margin-left: 16px;
-    font-size: 14px;
+    font-size: 16px;
+    color: #F2921D;
   }
 
-  nav img {
-    max-height: 70px;
-    border-radius: 50%;
+  button {
+    background-color: #DC3535;
   }
 
   span {
-    font-size: 14px;
+    font-size: 16px;
     display: inline-block;
     margin-left: 16px;
     padding-left: 16px;
     border-left: 1px solid #eee;
+    color: #F2921D;
   }
 </style>

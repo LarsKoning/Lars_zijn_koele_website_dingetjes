@@ -1,10 +1,10 @@
 <template>
   <form @submit.prevent="handleSubmit">
     <h4>Create New Playlist</h4>
-    <input type="text" required placeholder="Playlist title" v-model="title">
-    <textarea required placeholder="Playlist description..." v-model="description"></textarea>
+    <input class="title" type="text" required placeholder="Playlist title" v-model="title" >
+    <textarea class="desc" required placeholder="Playlist description..." v-model="description" ></textarea>
 
-    <label>Upload Playlist cover image</label>
+    <label>Upload Blog cover image</label>
     <input type="file" @change="handleChange">
     <div class="error">{{ fileError }}</div>
 
@@ -91,5 +91,9 @@ export default {
 
   button {
     margin-top: 20px;
+  }
+
+  .title, .desc {
+    background-color: #292929;
   }
 </style>

@@ -6,15 +6,19 @@
   --warning: #da0f41;
 }
 
+cursor {
+  color: red;
+}
+
 * {
   margin: 0;
   padding: 0;
   font-family: 'Nunito', sans-serif;
-  color: var(--primary);
+  /* color: red; */
 }
 
 body {
-  background: #fafafa;
+  background: black;
 }
 
 a {
@@ -48,9 +52,9 @@ form {
   margin: 0 auto;
   padding: 30px;
   border-radius: 8px;
-  box-shadow: 1px 2px 3px rgba(50, 50, 50, 0.05);
   border: 1px solid var(--secondary);
-  background: white;
+  background: #292929;
+  color:burlywood
 }
 
 input, textarea {
@@ -62,6 +66,15 @@ input, textarea {
   width: 100%;
   box-sizing: border-box;
   margin: 20px auto;
+  caret-color: red;
+}
+
+input[type="text"] {
+  color: red;
+}
+
+input[type="textarea"] {
+  color: red;
 }
 
 .error {

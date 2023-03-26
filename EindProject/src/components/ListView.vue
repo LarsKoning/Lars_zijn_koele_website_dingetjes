@@ -10,9 +10,9 @@
             <h3>{{ playlist.title }}</h3>
             <p>~  {{ playlist.username }}</p>
           </div>
-          <div class="song-number">
+          <!-- <div class="song-number">
             <p>{{ playlist.songs.length }} songs</p>
-          </div>
+          </div> -->
         </div>
       </router-link>
     </div>
@@ -31,7 +31,7 @@ export default {
     align-items: center;
     padding: 20px;
     border-radius: 10px;
-    background: white;
+    background: #292929;
     margin: 16px 0;
     transition: all ease 0.2s;
   }

@@ -1,7 +1,0 @@
-{
-  "jobs": [
-        { "title": "UX", "id": 1, "details": "lorem"},
-        { "title": "WD", "id": 2, "details": "lorem"},
-        { "title": "VD", "id": 3, "details": "lorem"}
-  ]
-}

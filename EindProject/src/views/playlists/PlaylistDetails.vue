@@ -8,14 +8,13 @@
         <img :src="playlist.coverUrl">
       </div>
       <h2>{{ playlist.title }}</h2>
-      <p class="username">Created by {{ playlist.username }}</p>
-      <p class="description">{{ playlist.description }}</p>
-      <button @click="handleDelete">Delete Blog</button>
+      <p class="username">~ {{ playlist.username }}</p>
+      <button v-if="ownership" @click="handleDelete">Delete Blog</button>
     </div>
 
     <!-- song list -->
     <div class="song-list">
-      <div v-if="!playlist.songs.length">No songs have been added yet</div>
+
       <div v-for="song in playlist.songs" :key="song.id" class="single-song">
         <div class="details">
           <h3>{{ song.title }}</h3>
@@ -77,6 +76,7 @@ export default {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 80px;
+    color: darkgoldenrod;
   }
 
   .cover {
@@ -100,6 +100,7 @@ export default {
 
   .playlist-info {
     text-align: center;
+    padding-bottom: 50px;
     color: darkgoldenrod;
   }
 
@@ -121,6 +122,7 @@ export default {
 
   .description {
     text-align: left;
+    color: darkgoldenrod;
   }
 
   .single-song {
@@ -130,5 +132,10 @@ export default {
     align-items: center;
     border-bottom: 1px dashed var(--warning);
     margin-bottom: 20px;
+  }
+
+  .details h3{
+    font-size: 22px;
+    margin-bottom: 5px;
   }
 </style>

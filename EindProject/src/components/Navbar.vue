@@ -34,7 +34,7 @@ export default {
     const handleClick = async () => {
       await logout()
       console.log('user logged out')
-      router.push({ name: 'login'})
+      router.push({ name: 'home'})
     }
     
 

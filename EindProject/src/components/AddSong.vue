@@ -1,10 +1,10 @@
 <template>
   <div class="add-song">
-    <button v-if="!showForm" @click="showForm = true">Add Songs</button>
+    <button v-if="!showForm" @click="showForm = true">Add Info</button>
     <form v-if="showForm" @submit.prevent="handleSubmit">
-      <h4>Add a New Song</h4>
-      <input type="text" placeholder="Song Title" required v-model="title">
-      <input type="text" placeholder="Artist" required v-model="artist">
+      <h4>Add More Info About The Project</h4>
+      <input type="text" placeholder="Coding Language" required v-model="title">
+      <input type="text" placeholder="What was it used for?" required v-model="artist">
       <button>Add</button>
     </form>
   </div> 
@@ -13,6 +13,7 @@
 <script>
 import { ref } from 'vue';
 import useDocuement from '/composables/useDocument'
+import { timestamp } from '@/firebase/config';
 
 export default {
   props: ['playlist'],

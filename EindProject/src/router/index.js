@@ -8,21 +8,21 @@ import UserPlaylists from '@/views/playlists/UserPlaylists.vue'
 
 import { projectAuth } from '@/firebase/config'
 
-const requireAuth = (to, from, next) => {
-  let user = projectAuth.currentUser
-  if (!user) {
-    next({ name: 'login' })
-  } else {
-    next()
-  }
-}
+// const requireAuth = (to, from, next) => {
+//   let user = projectAuth.currentUser
+//   if (!user) {
+//     next({ name: 'login' })
+//   } else {
+//     next()
+//   }
+// }
 
 const routes = [
   {
     path: '/',
     name: 'home',
     component: Home,
-    beforeEnter: requireAuth
+    // beforeEnter: requireAuth
   },
   {
     path: '/login',
@@ -38,20 +38,20 @@ const routes = [
     path: '/playlists/create',
     name: 'createPlaylist',
     component: CreatePlaylist,
-    beforeEnter: requireAuth
+    // beforeEnter: requireAuth
   },
   {
     path: '/playlists/:id',
     name: 'playlistDetails',
     component: PlaylistDetails,
-    beforeEnter: requireAuth,
+    // beforeEnter: requireAuth,
     props: true
   },
   {
     path: '/playlists/user',
     name: 'userPlaylists',
     component: UserPlaylists,
-    beforeEnter: requireAuth
+    // beforeEnter: requireAuth
   }
 ]
 

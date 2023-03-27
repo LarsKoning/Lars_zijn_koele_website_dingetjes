@@ -81,6 +81,7 @@ export default {
   input[type="file"] {
     border: 0;
     padding: 0;
+    color: darkgoldenrod;
   }
 
   label {

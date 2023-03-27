@@ -54,7 +54,7 @@ form {
   border-radius: 8px;
   border: 1px solid var(--secondary);
   background: #292929;
-  color:burlywood
+  color:darkgoldenrod
 }
 
 input, textarea {
@@ -66,15 +66,15 @@ input, textarea {
   width: 100%;
   box-sizing: border-box;
   margin: 20px auto;
-  caret-color: red;
+  caret-color: darkgoldenrod;
 }
 
 input[type="text"] {
-  color: red;
+  color: darkgoldenrod;
 }
 
 input[type="textarea"] {
-  color: red;
+  color: darkgoldenrod;
 }
 
 .error {

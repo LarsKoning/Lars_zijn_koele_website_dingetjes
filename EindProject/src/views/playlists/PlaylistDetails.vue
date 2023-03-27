@@ -10,7 +10,7 @@
       <h2>{{ playlist.title }}</h2>
       <p class="username">Created by {{ playlist.username }}</p>
       <p class="description">{{ playlist.description }}</p>
-      <button @click="handleDelete">Delete Playlist</button>
+      <button @click="handleDelete">Delete Blog</button>
     </div>
 
     <!-- song list -->
@@ -100,12 +100,14 @@ export default {
 
   .playlist-info {
     text-align: center;
+    color: darkgoldenrod;
   }
 
   .playlist-info h2 {
     text-transform: capitalize;
     font-size: 28px;
     margin-top: 20px;
+    color: darkgoldenrod;
   }
 
   .playlist-info p {
@@ -113,7 +115,8 @@ export default {
   }
 
   .username {
-    color: #999;
+    margin-top: 10px;
+    color: darkgoldenrod;
   }
 
   .description {

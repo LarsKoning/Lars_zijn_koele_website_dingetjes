@@ -61,6 +61,7 @@ export default {
   }
   .info {
     margin: 0 30px;
+    color:darkgoldenrod;
   }
   .song-number {
     margin-left: auto;

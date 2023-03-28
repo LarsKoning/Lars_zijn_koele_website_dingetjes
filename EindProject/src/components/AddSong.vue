@@ -20,6 +20,7 @@ export default {
   setup(props) {
     const title = ref('')
     const artist = ref('')
+    const isComplete = ref(false)
     const showForm = ref(false)
     const { updateDoc } = useDocuement('playlists', props.playlist.id)
 
@@ -27,6 +28,7 @@ export default {
       const newSong = {
         title: title.value,
         artist: artist.value,
+        isComplete: isComplete.value,
         id: Math.floor(Math.random() * 1000000)
       }
       await updateDoc({
@@ -36,7 +38,7 @@ export default {
       artist.value = ''
     }
 
-    return { title, artist, showForm, handleSubmit }
+    return { title, artist, isComplete, showForm, handleSubmit }
   }
 
 }

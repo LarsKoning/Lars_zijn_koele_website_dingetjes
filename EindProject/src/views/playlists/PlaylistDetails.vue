@@ -20,7 +20,10 @@
           <h3>{{ song.title }}</h3>
           <p>{{ song.artist }}</p>
         </div>
-        <button v-if="ownership" @click="handleClick(song.id)">Delete</button>
+        <section>
+          <span @click= "toggleComplete(song.id)" class="material-icons tick">done</span>
+          <span v-if="ownership" @click="handleClick(song.id)" class="material-icons">delete</span>
+        </section>
       </div>
       <AddSong v-if="ownership" :playlist="playlist"/>
     </div>
@@ -33,7 +36,7 @@ import useStorage from '/composables/useStorage'
 import getDocument from '/composables/getDocument'
 import useDocument from '/composables/useDocument'
 import getUser from '/composables/getUser'
-import { computed } from 'vue'
+import { computed, ref } from 'vue'
 import { useRouter } from 'vue-router'
 import AddSong from '../../components/AddSong.vue'
 
@@ -42,6 +45,9 @@ export default {
   props: ['id'],
   components: { AddSong },
   setup(props) {
+    const title = ref('')
+    const artist = ref('')
+    const isComplete = ref(false)
     const { error, document: playlist } = getDocument('playlists', props.id)
     const { user } = getUser()
     const { deleteDoc, updateDoc } = useDocument('playlists', props.id)
@@ -66,12 +72,30 @@ export default {
       await updateDoc({ songs })
     }
 
-    return { error, playlist, ownership, handleDelete, handleClick }
+    const toggleComplete = async (id) => {
+      const songs = playlist.value.songs
+      const updateSong = songs.findIndex((song) => song.id === id)
+      songs[updateSong].isComplete = !songs[updateSong].isComplete
+      await updateDoc({ songs })
+    }
+
+    return { error, playlist, ownership, handleDelete, handleClick, toggleComplete }
   }
 }
 </script>
 
 <style>
+.material-icons {
+  font-size: 3em;
+  margin-left: 10px;
+  color: #bbb;
+  cursor: pointer;
+  margin-left: auto;
+}
+
+.material-icons:hover {
+  color: #777;
+}
   .playlist-details {
     display: grid;
     grid-template-columns: 1fr 2fr;

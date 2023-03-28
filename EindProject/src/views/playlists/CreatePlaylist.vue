@@ -96,5 +96,6 @@ export default {
 
   .title, .desc {
     background-color: #292929;
+    color: darkgoldenrod;
   }
 </style>

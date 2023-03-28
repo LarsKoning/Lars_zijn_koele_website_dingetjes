@@ -1,20 +1,18 @@
 <template>
   <div>
     <div v-for="playlist in playlists" :key="playlist.id">
-      <router-link :to="{ name: 'playlistDetails', params: { id: playlist.id }}">
         <div class="single">
           <div class="thumbnail">
             <img :src="playlist.coverUrl">
           </div>
+          <router-link :to="{ name: 'playlistDetails', params: { id: playlist.id }}">
           <div class="info">
             <h3>{{ playlist.title }}</h3>
             <p>~  {{ playlist.username }}</p>
           </div>
-          <!-- <div class="song-number">
-            <p>{{ playlist.songs.length }} songs</p>
-          </div> -->
+        </router-link>
+        <span @click="toggleComplete" class="material-icons tick">done</span>
         </div>
-      </router-link>
     </div>
   </div>
 </template>
@@ -26,6 +24,19 @@ export default {
 </script>
 
 <style scoped>
+
+.material-icons {
+  font-size: 3em;
+  margin-left: 10px;
+  color: #bbb;
+  cursor: pointer;
+  float: right;
+  margin-left: auto;
+}
+
+.material-icons:hover {
+  color: #777;
+}
   .single {
     display: flex;
     align-items: center;
@@ -66,5 +77,4 @@ export default {
   .song-number {
     margin-left: auto;
   }
-  
 </style>

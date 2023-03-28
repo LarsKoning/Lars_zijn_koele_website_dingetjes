@@ -1,0 +1,16 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Create New Homepage Banner GG BOYS",
+      "details": "Lorem Ipsum",
+      "complete": false
+    },
+    {
+      "title": "Make New Website",
+      "details": "YOUR MOM",
+      "complete": true,
+      "id": 2
+    }
+  ]
+}

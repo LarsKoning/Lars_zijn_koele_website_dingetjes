@@ -17,6 +17,7 @@
 
       <div v-for="song in playlist.songs" :key="song.id" class="single-song">
         <div class="details">
+          <span class="dot" :style="color_variant"></span>
           <h3>{{ song.title }}</h3>
           <p>{{ song.artist }}</p>
         </div>
@@ -44,9 +45,12 @@ import AddSong from '../../components/AddSong.vue'
 export default {
   props: ['id'],
   components: { AddSong },
+  data(){
+    return{
+      color_variant: "background-color: red;"
+    }
+  },
   setup(props) {
-    const title = ref('')
-    const artist = ref('')
     const isComplete = ref(false)
     const { error, document: playlist } = getDocument('playlists', props.id)
     const { user } = getUser()
@@ -73,6 +77,11 @@ export default {
     }
 
     const toggleComplete = async (id) => {
+      if (isComplete) {
+        this.color_variant = "background-color: green;"
+      } else{
+        this.color_variant = "background-color: red;"
+      }
       const songs = playlist.value.songs
       const updateSong = songs.findIndex((song) => song.id === id)
       songs[updateSong].isComplete = !songs[updateSong].isComplete
@@ -85,6 +94,13 @@ export default {
 </script>
 
 <style>
+.dot {
+  height: 25px;
+  width: 25px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
 .material-icons {
   font-size: 3em;
   margin-left: 10px;

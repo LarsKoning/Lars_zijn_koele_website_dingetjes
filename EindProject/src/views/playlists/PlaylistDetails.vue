@@ -18,6 +18,8 @@
       <div v-for="song in playlist.songs" :key="song.id" class="single-song">
         <div class="details">
           <span class="dot" :style="color_variant"></span>
+          <span class="dot" :style="color_variant"></span>
+          <span class="dot" :style="color_variant"></span>
           <h3>{{ song.title }}</h3>
           <p>{{ song.artist }}</p>
         </div>
@@ -172,6 +174,10 @@ export default {
     align-items: center;
     border-bottom: 1px dashed var(--warning);
     margin-bottom: 20px;
+  }
+  .single-song.details{
+    display: flex;
+    justify-content: left;
   }
 
   .details h3{

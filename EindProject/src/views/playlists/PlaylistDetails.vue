@@ -17,11 +17,13 @@
 
       <div v-for="song in playlist.songs" :key="song.id" class="single-song">
         <div class="details">
-          <span class="dot" :style="color_variant"></span>
-          <span class="dot" :style="color_variant"></span>
-          <span class="dot" :style="color_variant"></span>
-          <h3>{{ song.title }}</h3>
-          <p>{{ song.artist }}</p>
+          <span v-if="song.isComplete" class="dot" style="background-color: green;"></span>
+          <span v-else class="dot" style="background-color: red;"></span>
+
+          <div>
+            <h3>{{ song.title }}</h3>
+            <p>{{ song.artist }}</p>
+          </div>
         </div>
         <section>
           <span @click= "toggleComplete(song.id)" class="material-icons tick">done</span>
@@ -47,11 +49,6 @@ import AddSong from '../../components/AddSong.vue'
 export default {
   props: ['id'],
   components: { AddSong },
-  data(){
-    return{
-      color_variant: "background-color: red;"
-    }
-  },
   setup(props) {
     const isComplete = ref(false)
     const { error, document: playlist } = getDocument('playlists', props.id)
@@ -59,6 +56,7 @@ export default {
     const { deleteDoc, updateDoc } = useDocument('playlists', props.id)
     const { deleteImage } = useStorage()
     const router = useRouter()
+
 
 
     const ownership = computed(() => {
@@ -79,14 +77,11 @@ export default {
     }
 
     const toggleComplete = async (id) => {
-      if (isComplete) {
-        this.color_variant = "background-color: green;"
-      } else{
-        this.color_variant = "background-color: red;"
-      }
+      
       const songs = playlist.value.songs
       const updateSong = songs.findIndex((song) => song.id === id)
       songs[updateSong].isComplete = !songs[updateSong].isComplete
+
       await updateDoc({ songs })
     }
 
@@ -101,6 +96,7 @@ export default {
   width: 25px;
   border-radius: 50%;
   display: inline-block;
+  margin-right: 20px;
 }
 
 .material-icons {
@@ -178,6 +174,12 @@ export default {
   .single-song.details{
     display: flex;
     justify-content: left;
+  }
+
+  .details {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
   }
 
   .details h3{

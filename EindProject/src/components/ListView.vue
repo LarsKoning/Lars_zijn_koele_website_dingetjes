@@ -2,6 +2,8 @@
   <div>
     <div v-for="playlist in playlists" :key="playlist.id">
         <div class="single">
+          <span class="dot" style="background-color: green;"></span>
+          <span class="dot" style="background-color: red;"></span>
           <div class="thumbnail">
             <img :src="playlist.coverUrl">
           </div>
@@ -11,32 +13,45 @@
             <p>~  {{ playlist.username }}</p>
           </div>
         </router-link>
-        <span @click="toggleComplete" class="material-icons tick">done</span>
+        <span @click= "handleUpdate(playlist.id)" class="material-icons tick">done</span>
         </div>
     </div>
   </div>
 </template>
 
 <script>
+import useDocument from '/composables/useDocument';
 export default {
-  props: ['playlists']
+
+  props: ['playlists'],
+  setup(props){
+    const handleUpdate = async (id) => {
+      const plays = props.playlists
+      const updatePlay = plays.findIndex((playlist) => playlist.id === id)
+      console.log(plays);
+      const newValue = !plays[updatePlay].isComplete
+
+      const { updateDoc } = useDocument('playlists', id)
+
+     await updateDoc ({ isComplete: newValue })
+}
+    return { handleUpdate }
+  }
 }
 </script>
 
 <style scoped>
 
-.material-icons {
-  font-size: 3em;
-  margin-left: 10px;
-  color: #bbb;
-  cursor: pointer;
-  float: right;
-  margin-left: auto;
-}
+  .material-icons {
+    font-size: 3em;
+    color: #bbb;
+    cursor: pointer;
+    padding-left: auto;
+  }
 
-.material-icons:hover {
-  color: #777;
-}
+  .material-icons:hover {
+    color: #777;
+  }
   .single {
     display: flex;
     align-items: center;
@@ -73,8 +88,5 @@ export default {
   .info {
     margin: 0 30px;
     color:darkgoldenrod;
-  }
-  .song-number {
-    margin-left: auto;
   }
 </style>

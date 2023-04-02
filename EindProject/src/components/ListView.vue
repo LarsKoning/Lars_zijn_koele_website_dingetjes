@@ -2,8 +2,8 @@
   <div>
     <div v-for="playlist in playlists" :key="playlist.id">
         <div class="single">
-          <span class="dot" style="background-color: green;"></span>
-          <span class="dot" style="background-color: red;"></span>
+          <span v-if="playlist.isComplete" class="dot" style="background-color: green;"></span>
+          <span v-else class="dot" style="background-color: red;"></span>
           <div class="thumbnail">
             <img :src="playlist.coverUrl">
           </div>

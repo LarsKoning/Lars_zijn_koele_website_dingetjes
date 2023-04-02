@@ -25,7 +25,7 @@
             <p>{{ song.artist }}</p>
           </div>
         </div>
-        <section>
+        <section class="icoontjes">
           <span @click= "toggleComplete(song.id)" class="material-icons tick">done</span>
           <span v-if="ownership" @click="handleClick(song.id)" class="material-icons">delete</span>
         </section>
@@ -97,6 +97,11 @@ export default {
   border-radius: 50%;
   display: inline-block;
   margin-right: 20px;
+}
+
+.icoontjes {
+  display: flex;
+  flex-direction: row;
 }
 
 .material-icons {

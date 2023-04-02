@@ -34,7 +34,7 @@ export default {
       const { updateDoc } = useDocument('playlists', id)
 
      await updateDoc ({ isComplete: newValue })
-}
+    }
     return { handleUpdate }
   }
 }

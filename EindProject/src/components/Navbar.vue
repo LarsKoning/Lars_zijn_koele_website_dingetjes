@@ -1,12 +1,12 @@
 <template>
   <section class="navbar">
     <nav>
-      <router-link :to="{ name: 'cv' }">
+      <router-link :to="{ name: 'home' }">
         <img src="@/assets/banner.png" alt="Logo Lars">
       </router-link>
       <section class="links">
         <section v-if="user">
-          <router-link class="btn" :to="{ name: 'home' }">Blog Page</router-link>
+          <router-link class="btn" :to="{ name: 'blog' }">Blog Page</router-link>
 
           <router-link :to="{ name: 'createPlaylist'}">Create New Blog Post</router-link>
 

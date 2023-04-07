@@ -43,8 +43,8 @@ const routes = [
     component: UserPlaylists,
   },
   {
-    path: '/cv',
-    name: 'cv',
+    path: '/blog',
+    name: 'blog',
     component: CV,
   }
 ]

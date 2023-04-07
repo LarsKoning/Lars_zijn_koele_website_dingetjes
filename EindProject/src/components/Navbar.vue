@@ -16,7 +16,7 @@
           <button @click="handleClick">Logout</button>
         </section>
         <section v-else>
-          <router-link class="btn" :to="{ name: 'home' }">Blog Page</router-link>
+          <router-link class="btn" :to="{ name: 'blog' }">Blog Page</router-link>
           <router-link class="btn" :to="{ name: 'login' }">Login</router-link>
           <!-- <router-link class="btn" :to="{ name: 'signup' }">Signup</router-link> -->
         </section>

@@ -119,7 +119,7 @@ export default {
     display: grid;
     grid-template-columns: 1fr 2fr;
     gap: 80px;
-    color: darkgoldenrod;
+    color: #FCF8E8;
   }
 
   .cover {
@@ -151,7 +151,7 @@ export default {
     text-transform: capitalize;
     font-size: 28px;
     margin-top: 20px;
-    color: darkgoldenrod;
+    color: #FCF8E8;
   }
 
   .playlist-info p {
@@ -160,7 +160,7 @@ export default {
 
   .username {
     margin-top: 10px;
-    color: darkgoldenrod;
+    color: #FCF8E8;
   }
 
   .description {

@@ -222,7 +222,7 @@
 
 <script>
 export default {
-
+  name: 'home'
 }
 </script>
 
@@ -252,10 +252,15 @@ export default {
   padding: 0 20px;
   border-top-left-radius: 25px;
   border-bottom-left-radius: 25px;
+  border-right: 1px solid #fff;
+
 }
 
 .right {
   width: calc(100% - 250px);
+  background-color: #292b2f;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
 }
 
 .left .img_holder {
@@ -326,6 +331,15 @@ export default {
   color: #fff;
 }
 
+.skills .li_wrap:hover .icon,
+.skills .li_wrap:hover .text{
+	color: #fff;
+}
+
+.skills .li_wrap:hover{
+	background: #9153c9;
+}
+
 .skills ul,
 .hobbies ul {
   display: flex;
@@ -346,7 +360,8 @@ export default {
 }
 
 .skills .li_wrap{
-	background: #fff;
+	background: #292b2f;
+  border: 2px solid #fff;
 }
 
 .skills .li_wrap .text,
@@ -377,6 +392,7 @@ export default {
 	color: #fff;
 	height: 240px;
   border-top-right-radius: 25px;
+  border-bottom: 1px solid #fff;
 }
 
 .header .name{
@@ -398,7 +414,6 @@ export default {
 
 .right_inner{
 	padding: 30px;
-	color: #292b2f;
 }
 
 .right_inner .education{
@@ -419,6 +434,7 @@ export default {
 	width: calc(100%  - 125px);
 	padding-left: 25px;
 	position: relative;
+  color: #fff;
 }
 
 .right_inner .li_wrap .info_title{

@@ -1,25 +1,27 @@
 <template>
-  <div class="navbar">
+  <section class="navbar">
     <nav>
-      <router-link :to="{ name: 'home' }">
-      <img src="@/assets/banner.png" alt="popplio cute">
+      <router-link :to="{ name: 'cv' }">
+        <img src="@/assets/banner.png" alt="Logo Lars">
       </router-link>
-      <!-- <h1><router-link :to="{ name: 'home' }">Lars Koning's portfolio site</router-link></h1> -->
-      <div class="links">
-        <div v-if="user">
-          <router-link :to="{ name: 'createPlaylist'}">Create New Blog Post</router-link>
-          <!-- <router-link :to="{ name: 'userPlaylists'}">My Playlists</router-link> -->
-          <span>Hi there, {{ user.displayName }}</span>
-          <button @click="handleClick">Logout</button>
-        </div>
-        <div v-else>
-          <router-link class="btn" :to="{ name: 'login' }">Login</router-link>
+      <section class="links">
+        <section v-if="user">
           <router-link class="btn" :to="{ name: 'home' }">Blog Page</router-link>
+
+          <router-link :to="{ name: 'createPlaylist'}">Create New Blog Post</router-link>
+
+          <!-- <router-link :to="{ name: 'userPlaylists'}">My Playlists</router-link> -->
+          <span>Hi there, {{ user.displayName }}!</span>
+          <button @click="handleClick">Logout</button>
+        </section>
+        <section v-else>
+          <router-link class="btn" :to="{ name: 'home' }">Blog Page</router-link>
+          <router-link class="btn" :to="{ name: 'login' }">Login</router-link>
           <!-- <router-link class="btn" :to="{ name: 'signup' }">Signup</router-link> -->
-        </div>
-      </div>
+        </section>
+      </section>
     </nav>
-  </div>
+  </section>
 </template>
 
 <script>

@@ -114,99 +114,99 @@
         </section>
       </section>
       <section class="right">
-        <div class="header">
-					<div class="name_role">
-						<div class="name">
+        <section class="header">
+					<section class="name_role">
+						<section class="name">
 							Lars Koning
-						</div>
-						<div class="role">
+						</section>
+						<section class="role">
 							IAT
-						</div>
-					</div>
-					<div class="about">
+						</section>
+					</section>
+					<section class="about">
 						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta beatae optio, corporis fugit accusantium debitis laborum tenetur, quisquam distinctio nihil quam eum. Laudantium saepe, sunt, esse laboriosam dolores distinctio?
-					</div>
-				</div>
-        <div class="right_inner">
-          <div class="exp">
-            <div class="titles">
+					</section>
+				</section>
+        <section class="right_inner">
+          <section class="exp">
+            <section class="titles">
               Experience
-            </div>
-            <div class="exp_wrap">
+            </section>
+            <section class="exp_wrap">
               <ul>
                 <li>
-                  <div class="li_wrap">
-                    <div class="date">2018 - Present</div>
-                    <div class="info">
+                  <section class="li_wrap">
+                    <section class="date">2018 - Present</section>
+                    <section class="info">
                       <p class="info_title">UI Team Lead</p>
                       <p class="info_com">Facebook</p>
                       <p class="info_cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, facilis.</p>
-                    </div>
-                </div>
+                    </section>
+                </section>
                 </li>
                 <li>
-                  <div class="li_wrap">
-                    <div class="date">2015 - 2018</div>
-                    <div class="info">
+                  <section class="li_wrap">
+                    <section class="date">2015 - 2018</section>
+                    <section class="info">
                       <p class="info_title">UI Devloper</p>
                       <p class="info_com">Facebook</p>
                       <p class="info_cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, facilis.</p>
-                    </div>
-                </div>
+                    </section>
+                </section>
                 </li>
                 <li>
-                  <div class="li_wrap">
-                    <div class="date">2014 - 2015</div>
-                    <div class="info">
+                  <section class="li_wrap">
+                    <section class="date">2014 - 2015</section>
+                    <section class="info">
                       <p class="info_title">Junior UI Developer</p>
                       <p class="info_com">Coding Power</p>
                       <p class="info_cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, facilis.</p>
-                    </div>
-                </div>
+                    </section>
+                </section>
                 </li>
               </ul>
-            </div>
-          </div>
-          <div class="education">
-            <div class="titles">
+            </section>
+          </section>
+          <section class="education">
+            <section class="titles">
               Education
-            </div>
-            <div class="education_wrap">
+            </section>
+            <section class="education_wrap">
               <ul>
                 <li>
-                  <div class="li_wrap">
-                    <div class="date">2010 - 2014</div>
-                    <div class="info">
+                  <section class="li_wrap">
+                    <section class="date">2010 - 2014</section>
+                    <section class="info">
                       <p class="info_title">Computer Science</p>
                       <p class="info_com">Isreal University</p>
                       <p class="info_cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, facilis.</p>
-                    </div>
-                </div>
+                    </section>
+                </section>
                 </li>
                 <li>
-                  <div class="li_wrap">
-                    <div class="date">2007 - 2010</div>
-                    <div class="info">
+                  <section class="li_wrap">
+                    <section class="date">2007 - 2010</section>
+                    <section class="info">
                       <p class="info_title">je moeder</p>
                       <p class="info_com">Facebook</p>
                       <p class="info_cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, facilis.</p>
-                    </div>
-                </div>
+                    </section>
+                </section>
                 </li>
                 <li>
-                  <div class="li_wrap">
-                    <div class="date">2004 - 2007</div>
-                    <div class="info">
+                  <section class="li_wrap">
+                    <section class="date">2004 - 2007</section>
+                    <section class="info">
                       <p class="info_title">IDK WTF HIER MOET</p>
                       <p class="info_com">Coding Power</p>
                       <p class="info_cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, facilis.</p>
-                    </div>
-                </div>
+                    </section>
+                </section>
                 </li>
               </ul>
-            </div>
-          </div>
-        </div>
+            </section>
+          </section>
+        </section>
       </section>
     </section>
   </section>

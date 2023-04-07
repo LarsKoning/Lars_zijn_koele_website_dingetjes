@@ -226,8 +226,8 @@ export default {
   list-style: none;
 }
 
-#app {
-  background: linear-gradient(to right, #3525af, #9153c9);
+.wrapper {
+  border-radius: 20%;
 }
 
 .resume {
@@ -235,12 +235,15 @@ export default {
   background: #fff;
   margin: 25px auto;
   display: flex;
+  border-radius: 25px;
 }
 
 .left {
   background: #292b2f;
   width: 250px;
   padding: 0 20px;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
 }
 
 .right {
@@ -301,15 +304,16 @@ export default {
   margin-bottom: 15px;
 }
 
+.contact .li_wrap::after {
+  border-bottom: 1px dashed red;
+}
+
 .contact .li_wrap .icon {
-  width: 50%;
+  width: 25%;
   height: 50%;
-  background: #fff;
-  border-radius: 15px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 15px;
 }
 
 .contact .li_wrap .text {
@@ -368,6 +372,7 @@ export default {
 	padding: 15px 30px;
 	color: #fff;
 	height: 240px;
+  border-top-right-radius: 25px;
 }
 
 .header .name{

@@ -14,6 +14,7 @@
         </div>
         <div v-else>
           <router-link class="btn" :to="{ name: 'login' }">Login</router-link>
+          <router-link class="btn" :to="{ name: 'home' }">Blog Page</router-link>
           <!-- <router-link class="btn" :to="{ name: 'signup' }">Signup</router-link> -->
         </div>
       </div>

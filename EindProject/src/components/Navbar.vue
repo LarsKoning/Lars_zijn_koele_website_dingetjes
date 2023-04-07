@@ -12,6 +12,7 @@
 
           <!-- <router-link :to="{ name: 'userPlaylists'}">My Playlists</router-link> -->
           <span>Hi there, {{ user.displayName }}!</span>
+
           <button @click="handleClick">Logout</button>
         </section>
         <section v-else>

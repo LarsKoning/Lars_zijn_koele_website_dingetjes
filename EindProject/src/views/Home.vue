@@ -72,8 +72,26 @@
 							</li>
 							<li>
 								<section class="li_wrap">
-									<section class="icon"><i class="fab fa-react"></i></section>
-									<section class="text">React.JS</section>
+									<section class="icon"><i class="fa-brands fa-vuejs"></i></section>
+									<section class="text">Vue.JS</section>
+								</section>
+							</li>
+              <li>
+								<section class="li_wrap">
+									<section class="icon"><i class="fa-brands fa-laravel"></i></section>
+									<section class="text">PHP</section>
+								</section>
+							</li>
+              <li>
+								<section class="li_wrap">
+									<section class="icon"><i class="fa-brands fa-python"></i></section>
+									<section class="text">Python</section>
+								</section>
+							</li>
+              <li>
+								<section class="li_wrap">
+									<section class="icon"><i class="fa-solid fa-database"></i></section>
+									<section class="text">SQL</section>
 								</section>
 							</li>
 						</ul>
@@ -87,26 +105,26 @@
 						<ul>
 							<li>
 								<section class="li_wrap">
-									<section class="icon"><i class="fas fa-book"></i></section>
-									<section class="text">Reading</section>
+									<section class="icon"><i class="fas fa-gamepad"></i></section>
+									<section class="text">Gaming</section>
 								</section>
 							</li>
-							<li>
+              <li>
 								<section class="li_wrap">
 									<section class="icon"><i class="fas fa-music"></i></section>
 									<section class="text">Music</section>
 								</section>
 							</li>
-							<li>
+              <li>
 								<section class="li_wrap">
-									<section class="icon"><i class="fas fa-gamepad"></i></section>
-									<section class="text">Gaming</section>
+									<section class="icon"><i class="fa-solid fa-futbol"></i></section>
+									<section class="text">Goalkeeping</section>
 								</section>
 							</li>
 							<li>
 								<section class="li_wrap">
-									<section class="icon"><i class="fas fa-tree"></i></section>
-									<section class="text">Gardening</section>
+									<section class="icon"><i class="fa-brands fa-codepen"></i></section>
+									<section class="text">Coding</section>
 								</section>
 							</li>
 						</ul>
@@ -120,47 +138,37 @@
 							Lars Koning
 						</section>
 						<section class="role">
-							IAT
+							Interactie Technologie
 						</section>
 					</section>
 					<section class="about">
-						Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente dicta beatae optio, corporis fugit accusantium debitis laborum tenetur, quisquam distinctio nihil quam eum. Laudantium saepe, sunt, esse laboriosam dolores distinctio?
+						I am an IT student at Hogeschool Leiden, I was born in 2004, and I live in a small town called Boskoop. This portfolio website will be used to keep my CV up-to-date and to keep an overview of the projects I did in the past and the ones I am currently working on.
 					</section>
 				</section>
         <section class="right_inner">
           <section class="exp">
             <section class="titles">
-              Experience
+              Work Experience
             </section>
             <section class="exp_wrap">
               <ul>
                 <li>
                   <section class="li_wrap">
-                    <section class="date">2018 - Present</section>
+                    <section class="date">2021 - Present</section>
                     <section class="info">
-                      <p class="info_title">UI Team Lead</p>
-                      <p class="info_com">Facebook</p>
-                      <p class="info_cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, facilis.</p>
+                      <p class="info_title">LIDL</p>
+                      <p class="info_com">LIDL</p>
+                      <p class="info_cont">I started working for the LIDL when corona hit because my job at 't keldertje was stopped because of it.</p>
                     </section>
                 </section>
                 </li>
                 <li>
                   <section class="li_wrap">
-                    <section class="date">2015 - 2018</section>
+                    <section class="date">2018 - 2021</section>
                     <section class="info">
-                      <p class="info_title">UI Devloper</p>
-                      <p class="info_com">Facebook</p>
-                      <p class="info_cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, facilis.</p>
-                    </section>
-                </section>
-                </li>
-                <li>
-                  <section class="li_wrap">
-                    <section class="date">2014 - 2015</section>
-                    <section class="info">
-                      <p class="info_title">Junior UI Developer</p>
-                      <p class="info_com">Coding Power</p>
-                      <p class="info_cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, facilis.</p>
+                      <p class="info_title">Catering industry</p>
+                      <p class="info_com">'t keldertje</p>
+                      <p class="info_cont">I was the dishwasher for 3 years in the weekends at the restaurant 't keldertje</p>
                     </section>
                 </section>
                 </li>
@@ -175,33 +183,33 @@
               <ul>
                 <li>
                   <section class="li_wrap">
-                    <section class="date">2010 - 2014</section>
+                    <section class="date">2022 - Present</section>
                     <section class="info">
-                      <p class="info_title">Computer Science</p>
-                      <p class="info_com">Isreal University</p>
-                      <p class="info_cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, facilis.</p>
+                      <p class="info_title">College</p>
+                      <p class="info_com">Hogeschool Leiden</p>
+                      <p class="info_cont">I am studying 'Interactie Technologie(IAT)' at Hogeschool Leiden. IAT is a branch of IT where you mostly make actual products rather than pure code</p>
                     </section>
                 </section>
                 </li>
                 <li>
                   <section class="li_wrap">
-                    <section class="date">2007 - 2010</section>
+                    <section class="date">2016 - 2021</section>
                     <section class="info">
-                      <p class="info_title">je moeder</p>
-                      <p class="info_com">Facebook</p>
-                      <p class="info_cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, facilis.</p>
+                      <p class="info_title">High School</p>
+                      <p class="info_com">Groene Hart Rijnwoude / Groene Hart Lyceum</p>
+                      <p class="info_cont">At highschool i did general secondary education. This all went pretty well. This is also where i first got in touch with IT with the subject informatica</p>
                     </section>
                 </section>
                 </li>
                 <li>
                   <section class="li_wrap">
-                    <section class="date">2004 - 2007</section>
+                    <section class="date">2008 - 2016</section>
                     <section class="info">
-                      <p class="info_title">IDK WTF HIER MOET</p>
-                      <p class="info_com">Coding Power</p>
-                      <p class="info_cont">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, facilis.</p>
+                      <p class="info_title">Primary School</p>
+                      <p class="info_com">De Rehoboth</p>
+                      <p class="info_cont">fun times :) </p>
                     </section>
-                </section>
+                  </section>
                 </li>
               </ul>
             </section>
@@ -302,10 +310,6 @@ export default {
   align-items: center;
   width: 100%;
   margin-bottom: 15px;
-}
-
-.contact .li_wrap::after {
-  border-bottom: 1px dashed red;
 }
 
 .contact .li_wrap .icon {
